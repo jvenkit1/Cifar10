@@ -1,0 +1,14 @@
+We first ran a simple 6 layer Convolutional Network with alternating Dropout and Max Pooling Layers for 25 epochs with batch_size 64.
+We achieved an accuracy of 79.67% with this.
+
+When we increased the batch_size to 256, we obtained an accuracy of 78.04% which is almost the same as the previous case.
+
+We then added a Batch_Normalization layer after each Convolutional Layer, with batch_size as 64. The accuracy obtained was 82.46%.
+The accuracy for batch_size 64 with epochs 200 was 84.75 %
+The accuracy with batch_size 256 for the same model for 25 epochs was 81.2%. Since the accuracy is less than that for a batch size of 64, we aren't running it for 200 epochs.
+
+
+We tried adding Data Augmentation to the model now. We include image rotation, image shifting and image flipping as the additional augmentation techniques.
+The accuracy with batch_size 64 for 25 epochs was 88.4% and the accuracy with batch_size 128 for 100 epochs was 90.15%
+
+We now use VGGNet to solve this problem, keeping the above configuration.
